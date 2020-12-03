@@ -22,7 +22,7 @@ SELECT  e.pnome nome_empregado,
         pr.pjnome nome_projeto, 
         te.horas horas_dedicadas
 FROM empregado e
-INNER JOIN trabalha_em te on e.ssn = te.essn
+INNER JOIN trabalha_em te ON e.ssn = te.essn
 INNER JOIN projeto pr ON pr.pnumero = te.pno
 WHERE e.dno = 5
 AND pr.pjnome = 'ProductX'
@@ -32,7 +32,7 @@ AND te.horas > 10;
 
 SELECT COUNT(e.pnome) quantidade
 FROM empregado e
-INNER JOIN trabalha_em te on e.ssn = te.essn
+INNER JOIN trabalha_em te ON e.ssn = te.essn
 INNER JOIN projeto pr ON pr.pnumero = te.pno
 WHERE e.dno = 5
 AND pr.pjnome = 'ProductX'
@@ -89,7 +89,7 @@ SELECT  e.pnome empregado,
 FROM empregado e
 INNER JOIN trabalha_em te on e.ssn = te.essn
 INNER JOIN projeto pr ON pr.pnumero = te.pno
-LEFT JOIN max_horas mh on mh.pno = pr.pnumero
+LEFT JOIN max_horas mh ON mh.pno = pr.pnumero
 WHERE pr.pjnome = 'Newbenefits'
 AND te.horas = mh.max_horas;
 
@@ -119,7 +119,7 @@ WHERE d.dnome = 'Research';
 
 SELECT (SUM(e.salario)*1.1) soma_salarios_aumento
 FROM empregado e
-INNER JOIN trabalha_em te on e.ssn = te.essn
+INNER JOIN trabalha_em te ON e.ssn = te.essn
 INNER JOIN projeto pr ON pr.pnumero = te.pno
 WHERE pr.pjnome = 'ProductX';
 
