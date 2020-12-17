@@ -1,0 +1,30 @@
+1) Reinstalei o Anaconda
+
+no Anaconda Prompt
+2) conda update anaconda
+3) conda install -c conda-forge mysql-connector-python
+
+no Anaconda Navigator:
+4) Environments -> Create -> nomear o novo ambiente, selecionar a opção R e remover a opção
+Python -> clicar Create
+
+no Anaconda Prompt:
+5) conda info --envs
+6) conda activate r-env (no lugar de r-env, colocar o nome do ambiente que você criou)
+7) conda install -c r r-rmariadb
+8) conda install -c conda-forge r-rmysql
+
+no Jupyter Notebook (coletaDadosMySQL_R):
+9) Colocar a célula que instala RMariaDB como comentário (já foi instalado no passo 7)
+10) Abaixo dessa célula, criar outra com: 
+
+			library(RMariaDB)
+			library(RMySQL)
+
+11) Adicionar, antes da célula que contém o dbConnect, uma célula com:
+
+			drv <- dbDriver("MySQL")
+
+
+
+

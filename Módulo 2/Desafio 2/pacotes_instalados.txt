@@ -1,0 +1,7 @@
+conda install -c anaconda pymongo (ambiente base)
+conda install -c conda-forge r-mongolite (ambiente R)
+conda install -c conda-forge r-rtweet (ambiente R)
+conda install -c conda-forge tweepy (ambiente base)
+conda install -c conda-forge textblob (ambiente base)
+conda install -c conda-forge uritools (ambiente base)
+conda install -c conda-forge scrapy (ambiente base)
